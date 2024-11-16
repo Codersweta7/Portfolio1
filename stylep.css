@@ -1,0 +1,19 @@
+table,th{
+    border:2px,black;
+    border-style: solid;
+    border-radius: 3px;
+    border-collapse: collapse;
+   
+}
+
+
+img{
+    border-width: 300px;
+    border-top-left-radius: 550%;
+    border-top-right-radius: 550%;
+    border-bottom-left-radius: 550%;
+    border-bottom-right-radius:580% ;
+}
+.contact{
+    cursor:pointer;
+}
