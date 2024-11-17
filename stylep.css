@@ -265,12 +265,13 @@ textarea{
         width:1000;
     }
     nav a{
-        max-width:800px;
+
+        margin:5px;
         
         
     }
     .home{
-        margin-top:200px;
+        margin-top:300px;
         margin-left:10px;
         margin-right:5px;
         box-sizing: border-box;
