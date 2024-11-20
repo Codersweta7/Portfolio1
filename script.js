@@ -6,25 +6,36 @@ var typed = new Typed(".multiple-text",{
     loop:true
 })
 
+const express=require("express");
+const bodyParser=require("body-parser")
 
-const image =document.getElementById("myImage");
-const form =document.getElementById("myform").addEventListener("submit",function(event){
-    const inputs=document.querySelectorAll("#myform input[type='text']");
-    let formValid=true;
-    //loop through each input to validate
-    inputs.forEach((input)=>{
-        const errorPopup=input.nextElementsibling; //
-    if(input.value.trim() ===""){
-        errorPopup.style.display="block";
-        errorPopup.style.left=`${input.offsetLeft}px`;
-        errorPopup.style.top=`${input.offsetTop+input.offsetHeight}px`
-        formValid=false;
-    }else{
-        errorPopup.style.display="none";
-    }
 
+const app=express();
+const PORT =3000;
+// Middleware for parsing form data
+app.use(bodyParser.urlencoded({extended:true}))
+
+//serve the Form
+app.get('/',(req,res)=>{
+    res.sendFile(__dirname+'/index.html');
 });
-if(!formValid){
-    event.preventDefault();
+// Handle form submission
+app.post('/submit',(req,res)=>{
+    const {name,email}=req.body;
+})
+//simple Validation
+if(!name|| !email){
+    return res.status(400).send("All fields are required")
 }
+// Error handling for invalid routes
+
+app.use((req,res)=>{
+    res.status(404).send("This page is not working...")
 });
+// start the server
+app.listen(PORT,()=>{
+    console.log('Server running at localhost:${PORT}')
+});
+//log data to console and display it on response
+console.log('User Data :',{name,email});
+res.send(`<h1>form submitted successfully</h1><p>Name ${name}Email:${email}</p>`)

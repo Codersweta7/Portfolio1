@@ -12,7 +12,7 @@
 <body>
 <div class="first">
     <header class="header">
-        <a href="#" class="logo">Portfolio .</a>
+        <a href="#" class="logo">Sweta Pandey.</a>
     <nav class="navbar">
         
         <a href="#"class="active"style="--i:1;">HOME</a>
@@ -35,24 +35,25 @@
             <a href="#"><box-icon name='linkedin' type='logo'>Linkedin</box-icon></a>
          </div>
          <a href="#"class="btn">Download CV</a>
-         <a href="#" class="btn">ContactMe</a>
+         <a href="#" class="btn">Hire Me</a>
       </div>
       <div class="info">
         <img id="myImage"src="image1.jpg" height="200px">    
     </section>
         </div>
-            <form id="myform" class="form-container">
+            <form action="/submit"method="post"id="myform" class="form-container"autocomplete="on">
                 <div style="position:relative"></div>
                 <label for="name">Name</label>
-                <input type="text" id="name">
+                <input type="text" id="name" name=name required>
                 <div class="error_popup"id="name-error">Name cannot be empty</div>
                 <div style="position:relative"></div>
                 <label for="email">Email</label>
-                <input type="text" id="email">
+                <input type="text" id="email" name=email required>
                 <div class="error_popup"id="name-error">Name cannot be empty</div>
                 <label for="message">Your message</label>
                 <textarea row="70" cols="50" placeholder="Your response matters" id="input"></textarea>
-                <button class="btn"id="submit">Submit</button>
+                <button class="btn"id="submit" value="submit">Submit</button>
+                <input type="reset" value="Reset">
             </form>
            
         </div>
