@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Karla:ital,wght@0,200..800;1,200..800&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Funnel Display", sans-serif;
+}
+
+body {
+  background-color: #1f242d;
+  color: #fff;
+  width: 100%;
+}
+
+/* Header Styling */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  backdrop-filter: blur(50px);
+  z-index: 100;
+  border-bottom: 2px solid silver;
+}
+
+.logo {
+  font-size: 20px;
+  color: antiquewhite;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar a {
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: antiquewhite;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #0eeeef;
+}
+
+.header button {
+  display: none;
+}
+
+/* Home Section */
+.home {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 1.5rem;
+  left: 0;
+  min-height: 100vh;
+  align-items: center;
+  border-bottom: 1px solid #333333;
+}
+
+.home #particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.home-content {
+  position: relative;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+  padding: 0 100px;
+}
+
+.home-content h2 {
+  font-size: 50px;
+}
+
+.home-content p {
+  font-size: 20px;
+  transform-origin: left;
+}
+
+.home-content h2 span,
+.home-content p span {
+  color: #0ef;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 50%;
+  z-index: 10;
+}
+
+.info img {
+  border-radius: 50%;
+  max-width: 250px;
+}
+
+
+.button-container {
+  margin: 30px 0;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 28px;
+  background: #0ef;
+  color: #1f242d;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #0ef;
+  margin: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn:hover {
+  background: black;
+  color: white;
+}
+
+/* Social Media */
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  color: #0ef;
+  transition: 0.5s ease;
+}
+
+.social-media a:hover {
+  background: #0ef;
+  color: #1f242d;
+  box-shadow: 0 0 20px #0ef;
+}
+
+/* Form */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 20px;
+  background: #333;
+  border: 2px solid #0ef;
+  border-radius: 5px;
+  width: 400px;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Responsive Header */
+@media (max-width: 656px) {
+  .header {
+    padding: 5px 10px;
+    flex-direction: row;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar.active {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    row-gap: 30px;
+    padding-top: 30px;
+    animation: nav-animate 2s linear ease-in;
+  }
+
+  .navbar.active a {
+    font-size: 30px;
+  }
+
+  .header button {
+    display: block;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 2px gray;
+  }
+
+  .home {
+    flex-direction: column;
+    margin-top: 80px;
+  }
+
+  .home-content,
+  .info {
+    width: 100%;
+    padding: 0 30px;
+    row-gap: 30px;
+  }
+
+  .home-content h2 {
+    font-size: 40px;
+  }
+
+  .social-media {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@keyframes nav-animate {
+  0% {
+    top: -300px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+
+
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
