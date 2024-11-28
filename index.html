@@ -15,9 +15,9 @@
         <a href="#" class="logo">Portfolio .</a>
         <nav id="navbar" class="navbar">
             <a href="#" class="active" style="--i:1;">home</a>
-            <a href="#" style="--i:1;">about</a>
-            <a href="#" style="--i:1;">skills</a>
-            <a href="#" style="--i:1;">contact</a>
+            <a href="#" style="--i:1;">About</a>
+            <a href="#" style="--i:1;">Skills</a>
+            <a href="#" style="--i:1;">Contact</a>
         </nav>
         <button id="nav-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
@@ -31,12 +31,12 @@
         <div class="home-content">
             <h2>Hi There,<br /> I'm Sweta <span>Pandey</span></h2>
             <p>I'm a <span class="multiple-text"></span></p>
-            <!-- <p>A diligent student,excels in cybersecurity , development, and presentations,balancing internships,
-                college and open source contributions, I prioritize learning and innovations while pursuing creative
-                projects and creative endeavours.</p> -->
+            <h6>A diligent student,excels in <span id="works">Cybersecurity , Development, and Presentations,balancing internships,
+                college and open source contributions</span>, I prioritize learning and innovations while pursuing creative
+                projects and creative endeavours.</h6> 
             <div class="button-container">
-                <a href="#" class="btn">Download CV</a>
-                <a href="#" class="btn">ContactMe</a>
+                <a href="CV.pdf" class="btn">Download CV</a>
+                <a href="#contact" class="btn">ContactMe</a>
             </div>
 
             <div class="social-media">
@@ -67,23 +67,29 @@
             <img id="myImage" src="image1.jpg" height="200px">
         </div>
     </section>
-
+<section id="contact">
     <form id="myform" class="form-container">
         <div style="position:relative"></div>
         <label for="name">Name</label>
-        <input type="text" id="name">
-        <div class="error_popup" id="name-error">Name cannot be empty</div>
+        <input type="text" id="name" autocomplete="on" required>
+        <div class="error_popup" id="name-error"></div>
         <div style="position:relative"></div>
         <label for="email">Email</label>
-        <input type="text" id="email">
-        <div class="error_popup" id="name-error">Name cannot be empty</div>
+        <input type="text" id="email" autocomplete="on" required>
+        <div class="error_popup" id="name-error"></div>
         <label for="message">Your message</label>
         <textarea row="70" cols="50" placeholder="Your response matters" id="input"></textarea>
         <button class="btn" id="submit">Submit</button>
     </form>
+</section>
 
     </div>
-
+   <footer class="footer">
+    <p>&copy; 2024 Sweta.All rights reserved.</p>
+    <p>Designed and Developed with <svg xmlns="http://www.w3.org/2000/svg" id="heart" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+      </svg> by Sweta_Pandey.</p>
+   </footer>
     </div>
     <script src="./particle.js"></script>
     <script src="./app.js"></script>
