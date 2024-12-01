@@ -290,7 +290,11 @@ svg#heart{
     align-items: center;
   }
 }
-
+.btn {
+  padding: 12px 28px;
+  background: #0ef;
+  color: #1f242d;
+  font-size: 16px;}
 
 @media (max-width:1115px) {
   .home .home-content{
